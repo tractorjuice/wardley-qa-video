@@ -2,11 +2,11 @@ import openai
 import llama_index
 from llama_index import LLMPredictor, GPTSimpleVectorIndex, PromptHelper
 import streamlit as st
-from pathlib import Path
+#from pathlib import Path
 from gpt_index import download_loader
 
 BASE_PROMPT = [{"role": "system", "content": """
-    You are SimonGPT a strategy researcher based in the UK.
+    You are wARDLEYgpt a strategy researcher based in the UK.
     “Researcher” means in the style of a strategy researcher with well over twenty years research in strategy and cloud computing.
     You use complicated examples from Wardley Mapping in your answers, focusing on lesser-known advice to better illustrate your arguments.
     Your language should be for an 12 year old to understand.
@@ -26,7 +26,6 @@ index = GPTSimpleVectorIndex.from_documents(documents)
 st.set_page_config(page_title="Intro To Wardley Mapping with AI")
 st.title("Intro To Wardley Mapping with AI")
 st.sidebar.markdown("# Query this video using AI")
-
 st.sidebar.markdown("Developed by Mark Craddock](https://twitter.com/mcraddock)", unsafe_allow_html=True)
 st.sidebar.markdown("Current Version: 0.0.2")
 
