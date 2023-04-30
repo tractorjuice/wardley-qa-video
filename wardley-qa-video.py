@@ -23,11 +23,19 @@ documents = loader.load_data(ytlinks=['https://www.youtube.com/watch?v=KkePAhnkH
 
 index = GPTSimpleVectorIndex.from_documents(documents)
 
+html_temp = """
+                <div style="background-color:{};padding:1px">
+                
+                </div>
+                """
+
 st.set_page_config(page_title="Intro To Wardley Mapping with AI")
 st.title("Intro To Wardley Mapping with AI")
 st.sidebar.markdown("# Query this video using AI")
+st.sidebar.markdown(html_temp.format("rgba(55, 53, 47, 0.16)"),unsafe_allow_html=True)
 st.sidebar.markdown("Developed by Mark Craddock](https://twitter.com/mcraddock)", unsafe_allow_html=True)
 st.sidebar.markdown("Current Version: 0.1.4")
+st.sidebar.markdown(html_temp.format("rgba(55, 53, 47, 0.16)"),unsafe_allow_html=True)
 
 st.video('https://youtu.be/KkePAhnkHeg') 
 
