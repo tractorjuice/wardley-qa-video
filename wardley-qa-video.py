@@ -1,9 +1,6 @@
-import openai
-import llama_index
-from llama_index import LLMPredictor, GPTSimpleVectorIndex, PromptHelper
+from llama_index import LLMPredictor, GPTVectorStoreIndex, PromptHelper, download_loader
 import streamlit as st
-#from pathlib import Path
-from gpt_index import download_loader
+import openai
 
 BASE_PROMPT = [{"role": "system", "content": """
     You are wARDLEYgpt a strategy researcher based in the UK.
@@ -21,7 +18,7 @@ YoutubeTranscriptReader = download_loader("YoutubeTranscriptReader")
 loader = YoutubeTranscriptReader()
 documents = loader.load_data(ytlinks=['https://www.youtube.com/watch?v=KkePAhnkHeg'])
 
-index = GPTSimpleVectorIndex.from_documents(documents)
+index = GPTVectorStoreIndex.from_documents(documents)
 
 html_temp = """
                 <div style="background-color:{};padding:1px">
