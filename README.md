@@ -49,9 +49,6 @@ To clear the prompt and response, click the "Clear" button.
 ## Contributing
 Contributions are welcome! If you have any suggestions or improvements, please open an issue or submit a pull request.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
-
 ## Acknowledgements
 The LLama Index library (imported as llama_index) is used for efficient text indexing and querying.
 The OpenAI GPT model is utilized for generating dynamic responses and messages.
