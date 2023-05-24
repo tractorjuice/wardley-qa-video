@@ -1,4 +1,4 @@
-# Intro To Wardley Mapping with AI
+# Wardley Mapping Question & Answer with Simon Wardley Videos
 This repository contains an application that utilizes AI-powered language models to provide responses and queries about the video "Intro To Wardley Mapping." It leverages the OpenAI GPT model and the LLama Index library for efficient searching and indexing of text data.
 
 This is a Python script that scrapes the transcription from a YouTube video and builds a vector database for querying via OpenAI. The script makes use of several key libraries and modules, including openai, streamlit, llama_index, and gpt_index.
