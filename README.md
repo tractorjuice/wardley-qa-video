@@ -3,6 +3,10 @@ This repository contains an application that utilizes AI-powered language models
 
 This is a Python script that scrapes the transcription from a YouTube video and builds a vector database for querying via OpenAI. The script makes use of several key libraries and modules, including openai, streamlit, llama_index, and gpt_index.
 
+[![Twitter Follow](https://img.shields.io/twitter/follow/mcraddock?style=social)](https://twitter.com/mcraddock)
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wardley-video-chat.streamlit.app/)
+
 ## Features
 Query the video content using AI-powered language models.
 Retrieve relevant information and responses based on user prompts.
