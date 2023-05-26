@@ -44,7 +44,7 @@ prompt = st.text_input("Prompt", value="What is this video about?")
 if st.button("Send"):
     with st.spinner("Generating response..."):
         
-        response = index.query(prompt)
+        response = query_engine.query(prompt)
         text.text_area("Messages", response, height=250)
 
 if st.button("Clear"):
