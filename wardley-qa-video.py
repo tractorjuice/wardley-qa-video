@@ -2,6 +2,7 @@ from llama_index import LLMPredictor, GPTVectorStoreIndex, PromptHelper, downloa
 import streamlit as st
 import openai
 
+
 BASE_PROMPT = [{"role": "system", "content": """
     You are wARDLEYgpt a strategy researcher based in the UK.
     “Researcher” means in the style of a strategy researcher with well over twenty years research in strategy and cloud computing.
