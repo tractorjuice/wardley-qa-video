@@ -8,31 +8,17 @@ This is a Python script that scrapes the transcription from a YouTube video and 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wardley-video-chat.streamlit.app/)
 
 ## Features
-Query the video content using AI-powered language models.
-Retrieve relevant information and responses based on user prompts.
-Display the video for reference and context.
-Generate dynamic responses and messages based on user input.
+- Query the video content using AI-powered language models.
+- Retrieve relevant information and responses based on user prompts.
+- Display the video for reference and context.
+- Generate dynamic responses and messages based on user input.
 
 ## Installation
 To run the application, follow these steps:
 
-Clone the repository:
+Clone the repository and fire it up in Streamlit
 
-bash
-Copy code
-git clone https://github.com/your-username/wardley-mapping-ai.git
-Install the required dependencies:
-
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Run the application:
-
-bash
-Copy code
-streamlit run app.py
-Access the application through your web browser using the provided URL (typically http://localhost:8501).
+## Use
 
 On the main page, you will see the video "Intro To Wardley Mapping."
 
