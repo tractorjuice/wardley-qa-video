@@ -1,4 +1,4 @@
-from llama_index import LLMPredictor, GPTVectorStoreIndex, PromptHelper, download_loader, YoutubeTranscriptReader
+from llama_index import LLMPredictor, GPTVectorStoreIndex, PromptHelper, download_loader
 import streamlit as st
 import openai
 
