@@ -41,6 +41,8 @@ text = st.empty()
 
 prompt = st.text_input("Prompt", value="What is this video about?")
 
+query_engine = index.as_query_engine()
+
 if st.button("Send"):
     with st.spinner("Generating response..."):
         
