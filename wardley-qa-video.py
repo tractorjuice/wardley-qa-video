@@ -24,10 +24,10 @@ index = GPTVectorStoreIndex.from_documents(documents)
 st.set_page_config(page_title="Intro To Wardley Mapping with AI")
 st.title("Intro To Wardley Mapping with AI")
 st.sidebar.markdown("# Query this video using AI")
-st.divider()
+st.sidebar.divider()
 st.sidebar.markdown("Developed by Mark Craddock](https://twitter.com/mcraddock)", unsafe_allow_html=True)
 st.sidebar.markdown("Current Version: 0.1.4")
-st.divider()
+st.sidebar.divider()
 
 st.video('https://youtu.be/KkePAhnkHeg') 
 
