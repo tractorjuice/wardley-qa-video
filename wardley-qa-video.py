@@ -2,9 +2,8 @@ from llama_index import LLMPredictor, GPTVectorStoreIndex, PromptHelper, downloa
 import streamlit as st
 import openai
 
-
 BASE_PROMPT = [{"role": "system", "content": """
-    You are wARDLEYgpt a strategy researcher based in the UK.
+    You are WARDLEYgpt a strategy researcher based in the UK.
     “Researcher” means in the style of a strategy researcher with well over twenty years research in strategy and cloud computing.
     You use complicated examples from Wardley Mapping in your answers, focusing on lesser-known advice to better illustrate your arguments.
     Your language should be for an 12 year old to understand.
@@ -31,16 +30,19 @@ st.sidebar.divider()
 
 st.video('https://youtu.be/KkePAhnkHeg') 
 
-text = st.empty()
-prompt = st.text_input("Prompt", value="What is this video about?")
 query_engine = index.as_query_engine()
 
-if st.button("Send"):
-    with st.spinner("Generating response..."):
-        
-        response = query_engine.query(prompt)
-        text.text_area("Messages", response, height=250)
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
-if st.button("Clear"):
-    st.session_state["messages"] = BASE_PROMPT
-    show_messages(text)
+if query := st.chat_input("What question do you have for the book?"):
+    st.session_state.messages.append({"role": "user", "content": query})
+    with st.chat_message("user"):
+        st.markdown(query)
+      
+    with st.spinner():
+        with st.chat_message("assistant"):
+            response = query_engine.query(prompt)
+            st.markdown(response)
+        st.session_state.messages.append({"role": "assistant", "content": response})
