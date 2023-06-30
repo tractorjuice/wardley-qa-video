@@ -39,13 +39,13 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-if query := st.chat_input("What question do you have for the book?"):
+if query := st.chat_input("What question do you have for the video?"):
     st.session_state.messages.append({"role": "user", "content": query})
     with st.chat_message("user"):
         st.markdown(query)
       
     with st.spinner():
         with st.chat_message("assistant"):
-            response = query_engine.query(prompt)
+            response = query_engine.query(query)
             st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
