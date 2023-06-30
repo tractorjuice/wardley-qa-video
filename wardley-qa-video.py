@@ -34,7 +34,7 @@ st.video('https://youtu.be/KkePAhnkHeg')
 
 query_engine = index.as_query_engine()
 
-st.code(st.session_state.message)
+st.code(st.session_state.messages)
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
