@@ -1,6 +1,5 @@
 openai
 streamlit
-streamlit-chat
 llama_index
 gpt_index
 youtube_transcript_api~=0.5.0
