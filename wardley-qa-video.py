@@ -34,8 +34,6 @@ st.video('https://youtu.be/KkePAhnkHeg')
 
 query_engine = index.as_query_engine()
 
-st.code(st.session_state.messages)
-
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
@@ -50,3 +48,4 @@ if query := st.chat_input("What question do you have for the video?"):
             response = query_engine.query(query)
             st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
+        st.code(st.session_state.messages)
