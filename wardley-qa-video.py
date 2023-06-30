@@ -49,4 +49,3 @@ if query := st.chat_input("What question do you have for the video?"):
             response = query_engine.query(query)
             st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
-        st.code(st.session_state.messages)
