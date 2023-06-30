@@ -14,6 +14,9 @@ BASE_PROMPT = [{"role": "system", "content": """
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+    
 YoutubeTranscriptReader = download_loader("YoutubeTranscriptReader")
 loader = YoutubeTranscriptReader()
 documents = loader.load_data(ytlinks=['https://www.youtube.com/watch?v=KkePAhnkHeg'])
